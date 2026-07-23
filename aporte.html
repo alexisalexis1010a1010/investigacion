@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Quiz - Aportes según el Enfoque de Investigación</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:15px;
+    background:#f5f5f5;
+    line-height:1.6;
+}
+
+h1{
+    text-align:center;
+}
+
+#puntaje{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:15px;
+    text-align:center;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-bottom:20px;
+    z-index:10;
+}
+
+hr{
+    margin:25px 0;
+}
+
+h3{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+input[type=radio]{
+    transform:scale(1.3);
+    margin-right:10px;
+}
+
+p{
+    font-weight:bold;
+}
+
+
+@media(max-width:600px){
+
+body{
+    padding:10px;
+    font-size:17px;
+}
+
+h1{
+    font-size:24px;
+}
+
+h3{
+    font-size:19px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1>Quiz: Aportes según el Enfoque de Investigación</h1>
+
+<h2 id="puntaje">Puntaje: 0 / 2</h2>
+
+
+<script>
+
+let puntaje=0;
+let respondidas={};
+
+
+function verificar(opcion,correcta,n){
+
+if(respondidas[n]) return;
+
+respondidas[n]=true;
+
+let r=document.getElementById("r"+n);
+
+
+if(opcion.value===correcta){
+
+r.innerHTML="✅ Correcto";
+puntaje++;
+
+}
+
+else{
+
+r.innerHTML="❌ Incorrecto. La respuesta correcta es: "+correcta;
+
+}
+
+
+document.getElementById("puntaje").innerHTML="Puntaje: "+puntaje+" / 2";
+
+
+document.getElementsByName("p"+n).forEach(e=>e.disabled=true);
+
+}
+
+</script>
+
+
+
+<hr>
+
+
+<h3>1. ¿Cuál es el aporte si es de enfoque no experimental?</h3>
+
+<input type="radio" name="p1" value="A" onclick="verificar(this,'C',1)"> A. Aplica una solución directa al problema.<br>
+<input type="radio" name="p1" value="B" onclick="verificar(this,'C',1)"> B. Modifica las variables del estudio.<br>
+<input type="radio" name="p1" value="C" onclick="verificar(this,'C',1)"> C. Solo da consejos.<br>
+<input type="radio" name="p1" value="D" onclick="verificar(this,'C',1)"> D. Implementa un programa de intervención.<br>
+
+<p id="r1"></p>
+
+
+
+<hr>
+
+
+<h3>2. ¿Cuál es el aporte si es de enfoque experimental?</h3>
+
+<input type="radio" name="p2" value="A" onclick="verificar(this,'B',2)"> A. Solo describe la situación actual.<br>
+<input type="radio" name="p2" value="B" onclick="verificar(this,'B',2)"> B. Da la solución que va aplicar.<br>
+<input type="radio" name="p2" value="C" onclick="verificar(this,'B',2)"> C. Solo presenta recomendaciones generales.<br>
+<input type="radio" name="p2" value="D" onclick="verificar(this,'B',2)"> D. No propone ningún cambio.<br>
+
+<p id="r2"></p>
+
+
+</body>
+</html>
