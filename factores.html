@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Quiz - Factores de la Realidad Problemática</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:15px;
+    background:#f5f5f5;
+    line-height:1.6;
+}
+
+h1{
+    text-align:center;
+}
+
+#puntaje{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:15px;
+    text-align:center;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-bottom:20px;
+    z-index:10;
+}
+
+hr{
+    margin:25px 0;
+}
+
+h3{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+input[type=radio]{
+    transform:scale(1.3);
+    margin-right:10px;
+}
+
+p{
+    font-weight:bold;
+}
+
+
+@media(max-width:600px){
+
+body{
+    padding:10px;
+    font-size:17px;
+}
+
+h1{
+    font-size:24px;
+}
+
+h3{
+    font-size:19px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1>Quiz: Factores de la Realidad Problemática</h1>
+
+<h2 id="puntaje">Puntaje: 0 / 4</h2>
+
+
+<script>
+
+let puntaje=0;
+let respondidas={};
+
+
+function verificar(opcion,correcta,n){
+
+if(respondidas[n]) return;
+
+respondidas[n]=true;
+
+let r=document.getElementById("r"+n);
+
+
+if(opcion.value===correcta){
+
+r.innerHTML="✅ Correcto";
+puntaje++;
+
+}
+
+else{
+
+r.innerHTML="❌ Incorrecto. La respuesta correcta es: "+correcta;
+
+}
+
+
+document.getElementById("puntaje").innerHTML="Puntaje: "+puntaje+" / 4";
+
+
+document.getElementsByName("p"+n).forEach(e=>e.disabled=true);
+
+}
+
+</script>
+
+
+
+<hr>
+
+
+<h3>1. ¿Qué se señala en los factores de la realidad problemática?</h3>
+
+<input type="radio" name="p1" value="A" onclick="verificar(this,'C',1)"> A. Los resultados finales de la investigación.<br>
+<input type="radio" name="p1" value="B" onclick="verificar(this,'C',1)"> B. Las consecuencias del problema.<br>
+<input type="radio" name="p1" value="C" onclick="verificar(this,'C',1)"> C. Las causas que originan el problema de forma general.<br>
+<input type="radio" name="p1" value="D" onclick="verificar(this,'C',1)"> D. La solución propuesta al problema.<br>
+
+<p id="r1"></p>
+
+
+
+<hr>
+
+
+<h3>2. ¿Qué se describen en los factores de la realidad problemática?</h3>
+
+<input type="radio" name="p2" value="A" onclick="verificar(this,'B',2)"> A. Los resultados obtenidos en el estudio.<br>
+<input type="radio" name="p2" value="B" onclick="verificar(this,'B',2)"> B. Las posibles causas que originan el problema en el lugar de estudio.<br>
+<input type="radio" name="p2" value="C" onclick="verificar(this,'B',2)"> C. Las conclusiones de la investigación.<br>
+<input type="radio" name="p2" value="D" onclick="verificar(this,'B',2)"> D. Los instrumentos utilizados.<br>
+
+<p id="r2"></p>
+
+
+
+<hr>
+
+
+<h3>3. ¿Qué debe identificarse en los factores de la realidad problemática?</h3>
+
+<input type="radio" name="p3" value="A" onclick="verificar(this,'D',3)"> A. Las variables dependientes e independientes.<br>
+<input type="radio" name="p3" value="B" onclick="verificar(this,'D',3)"> B. Los objetivos generales y específicos.<br>
+<input type="radio" name="p3" value="C" onclick="verificar(this,'D',3)"> C. Las características de la muestra.<br>
+<input type="radio" name="p3" value="D" onclick="verificar(this,'D',3)"> D. Las causas directas e indirectas que originan el problema.<br>
+
+<p id="r3"></p>
+
+
+
+<hr>
+
+
+<h3>4. ¿Cuántos párrafos se recomienda elaborar para los factores de la realidad problemática?</h3>
+
+<input type="radio" name="p4" value="A" onclick="verificar(this,'B',4)"> A. Tres párrafos.<br>
+<input type="radio" name="p4" value="B" onclick="verificar(this,'B',4)"> B. Un párrafo.<br>
+<input type="radio" name="p4" value="C" onclick="verificar(this,'B',4)"> C. Cinco párrafos.<br>
+<input type="radio" name="p4" value="D" onclick="verificar(this,'B',4)"> D. Dos párrafos.<br>
+
+<p id="r4"></p>
+
+
+</body>
+</html>
