@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz - Realidad Problemática</title>
+</head>
+<body>
+
+<h1>Quiz: Realidad Problemática</h1>
+
+<form>
+
+    <h3>1. ¿A qué se refiere la realidad problemática?</h3>
+    <input type="radio" name="p1"> A. A la formulación de objetivos.<br>
+    <input type="radio" name="p1"> B. A la descripción detallada y objetiva de la situación actual o problema.<br>
+    <input type="radio" name="p1"> C. Al marco teórico.<br>
+    <input type="radio" name="p1"> D. A las conclusiones del estudio.<br>
+
+    <hr>
+
+    <h3>2. ¿Qué se describe en la realidad problemática?</h3>
+    <input type="radio" name="p2"> A. Los resultados esperados.<br>
+    <input type="radio" name="p2"> B. Las hipótesis.<br>
+    <input type="radio" name="p2"> C. La situación actual que atraviesa un objeto de estudio, fenómeno o contexto específico.<br>
+    <input type="radio" name="p2"> D. La metodología empleada.<br>
+
+    <hr>
+
+    <h3>3. ¿Cuándo se realiza la descripción de la realidad problemática?</h3>
+    <input type="radio" name="p3"> A. Después de analizar los resultados.<br>
+    <input type="radio" name="p3"> B. Durante la recolección de datos.<br>
+    <input type="radio" name="p3"> C. Al finalizar la investigación.<br>
+    <input type="radio" name="p3"> D. Antes de ser intervenido o analizado formalmente.<br>
+
+    <hr>
+
+    <h3>4. ¿Cuál es uno de los elementos de la realidad problemática?</h3>
+    <input type="radio" name="p4"> A. La muestra.<br>
+    <input type="radio" name="p4"> B. El instrumento.<br>
+    <input type="radio" name="p4"> C. La importancia.<br>
+    <input type="radio" name="p4"> D. La hipótesis.<br>
+
+    <hr>
+
+    <h3>5. ¿Cuál es otro elemento de la realidad problemática?</h3>
+    <input type="radio" name="p5"> A. Los objetivos.<br>
+    <input type="radio" name="p5"> B. La descripción de hechos.<br>
+    <input type="radio" name="p5"> C. El cronograma.<br>
+    <input type="radio" name="p5"> D. La bibliografía.<br>
+
+    <hr>
+
+    <h3>6. ¿Cuál es otro elemento de la realidad problemática?</h3>
+    <input type="radio" name="p6"> A. La población.<br>
+    <input type="radio" name="p6"> B. Las variables.<br>
+    <input type="radio" name="p6"> C. El enfoque.<br>
+    <input type="radio" name="p6"> D. El espacio.<br>
+
+    <hr>
+
+    <h3>7. ¿Cuál es otro elemento de la realidad problemática?</h3>
+    <input type="radio" name="p7"> A. El presupuesto.<br>
+    <input type="radio" name="p7"> B. Los factores.<br>
+    <input type="radio" name="p7"> C. El diseño.<br>
+    <input type="radio" name="p7"> D. Los antecedentes.<br>
+
+    <hr>
+
+    <h3>8. ¿Cuál es otro elemento de la realidad problemática?</h3>
+    <input type="radio" name="p8"> A. La hipótesis.<br>
+    <input type="radio" name="p8"> B. Los objetivos específicos.<br>
+    <input type="radio" name="p8"> C. La consecuencia.<br>
+    <input type="radio" name="p8"> D. La muestra.<br>
+
+    <hr>
+
+    <h3>9. ¿Cuál es otro elemento de la realidad problemática?</h3>
+    <input type="radio" name="p9"> A. El enfoque y el diseño.<br>
+    <input type="radio" name="p9"> B. Las variables y dimensiones.<br>
+    <input type="radio" name="p9"> C. Los antecedentes y teorías.<br>
+    <input type="radio" name="p9"> D. La solución y la investigación.<br>
+
+    <hr>
+
+    <button type="submit">Enviar respuestas</button>
+
+</form>
+
+</body>
+</html>
