@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Quiz - Importancia de la Realidad Problemática</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:15px;
+    background:#f5f5f5;
+    line-height:1.6;
+}
+
+h1{
+    text-align:center;
+}
+
+#puntaje{
+    position:sticky;
+    top:0;
+    background:white;
+    padding:15px;
+    text-align:center;
+    border:1px solid #ccc;
+    border-radius:10px;
+    margin-bottom:20px;
+    z-index:10;
+}
+
+hr{
+    margin:25px 0;
+}
+
+.pregunta{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+    margin-bottom:20px;
+}
+
+h3{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+}
+
+label{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+label:hover{
+    background:#efefef;
+}
+
+input[type=radio]{
+    transform:scale(1.3);
+    margin-right:10px;
+}
+
+p{
+    font-weight:bold;
+}
+
+@media(max-width:600px){
+
+    body{
+        padding:10px;
+        font-size:17px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    h3{
+        font-size:19px;
+    }
+
+    label{
+        padding:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Quiz: Importancia de la Realidad Problemática</h1>
+
+<h2 id="puntaje">Puntaje: 0 / 10</h2>
+
+
+<script>
+
+let puntaje=0;
+let respondidas={};
+
+function verificar(opcion,correcta,n){
+
+ if(respondidas[n]) return;
+
+ respondidas[n]=true;
+
+ const r=document.getElementById("r"+n);
+
+ if(opcion.value===correcta){
+    r.innerHTML="✅ Correcto";
+    puntaje++;
+ }
+ else{
+    r.innerHTML="❌ Incorrecto. La respuesta correcta es: "+correcta;
+ }
+
+ document.getElementById("puntaje").innerHTML="Puntaje: "+puntaje+" / 10";
+
+ document.getElementsByName("p"+n).forEach(e=>e.disabled=true);
+
+}
+
+</script>
+
+
+<hr>
+
+<h3>1. ¿Qué se expone en la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p1" value="A" onclick="verificar(this,'C',1)"> A. Los resultados obtenidos.<br>
+<input type="radio" name="p1" value="B" onclick="verificar(this,'C',1)"> B. La metodología empleada.<br>
+<input type="radio" name="p1" value="C" onclick="verificar(this,'C',1)"> C. El por qué se debe abordar el problema elegido.<br>
+<input type="radio" name="p1" value="D" onclick="verificar(this,'C',1)"> D. Las conclusiones del estudio.<br>
+
+<p id="r1"></p>
+
+
+<hr>
+
+<h3>2. ¿Con qué debe respaldarse la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p2" value="A" onclick="verificar(this,'A',2)"> A. Con aportes de especialistas.<br>
+<input type="radio" name="p2" value="B" onclick="verificar(this,'A',2)"> B. Con opiniones personales.<br>
+<input type="radio" name="p2" value="C" onclick="verificar(this,'A',2)"> C. Con experiencias aisladas.<br>
+<input type="radio" name="p2" value="D" onclick="verificar(this,'A',2)"> D. Con ejemplos sin evidencia.<br>
+
+<p id="r2"></p>
+
+
+<hr>
+
+<h3>3. ¿Con qué más debe respaldarse la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p3" value="A" onclick="verificar(this,'D',3)"> A. Con fotografías.<br>
+<input type="radio" name="p3" value="B" onclick="verificar(this,'D',3)"> B. Con opiniones personales.<br>
+<input type="radio" name="p3" value="C" onclick="verificar(this,'D',3)"> C. Con comentarios generales.<br>
+<input type="radio" name="p3" value="D" onclick="verificar(this,'D',3)"> D. Con teorías.<br>
+
+<p id="r3"></p>
+
+
+<hr>
+
+<h3>4. ¿Con qué otro elemento debe respaldarse la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p4" value="A" onclick="verificar(this,'B',4)"> A. Con objetivos.<br>
+<input type="radio" name="p4" value="B" onclick="verificar(this,'B',4)"> B. Con estadísticas.<br>
+<input type="radio" name="p4" value="C" onclick="verificar(this,'B',4)"> C. Con hipótesis.<br>
+<input type="radio" name="p4" value="D" onclick="verificar(this,'B',4)"> D. Con instrumentos.<br>
+
+<p id="r4"></p>
+
+
+<hr>
+
+<h3>5. ¿Qué debe detallarse en la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p5" value="A" onclick="verificar(this,'D',5)"> A. El cronograma.<br>
+<input type="radio" name="p5" value="B" onclick="verificar(this,'D',5)"> B. La muestra.<br>
+<input type="radio" name="p5" value="C" onclick="verificar(this,'D',5)"> C. El instrumento.<br>
+<input type="radio" name="p5" value="D" onclick="verificar(this,'D',5)"> D. El aporte a los ODS.<br>
+
+<p id="r5"></p>
+
+
+<hr>
+
+<h3>6. ¿Qué se desarrolla en la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p6" value="A" onclick="verificar(this,'B',6)"> A. Los instrumentos de investigación.<br>
+<input type="radio" name="p6" value="B" onclick="verificar(this,'B',6)"> B. Argumentos relacionados con el fenómeno.<br>
+<input type="radio" name="p6" value="C" onclick="verificar(this,'B',6)"> C. El presupuesto del proyecto.<br>
+<input type="radio" name="p6" value="D" onclick="verificar(this,'B',6)"> D. El cronograma de actividades.<br>
+
+<p id="r6"></p>
+
+
+<hr>
+
+<h3>7. ¿Qué más describe la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p7" value="A" onclick="verificar(this,'C',7)"> A. Los resultados finales.<br>
+<input type="radio" name="p7" value="B" onclick="verificar(this,'C',7)"> B. El diseño metodológico.<br>
+<input type="radio" name="p7" value="C" onclick="verificar(this,'C',7)"> C. La necesidad de abordar el problema en la actualidad.<br>
+<input type="radio" name="p7" value="D" onclick="verificar(this,'C',7)"> D. La población del estudio.<br>
+
+<p id="r7"></p>
+
+
+<hr>
+
+<h3>8. ¿Qué debe establecerse adicionalmente la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p8" value="A" onclick="verificar(this,'A',8)"> A. El vínculo correspondiente con los ODS que se relacionan.<br>
+<input type="radio" name="p8" value="B" onclick="verificar(this,'A',8)"> B. El costo económico de la investigación.<br>
+<input type="radio" name="p8" value="C" onclick="verificar(this,'A',8)"> C. La cantidad de participantes.<br>
+<input type="radio" name="p8" value="D" onclick="verificar(this,'A',8)"> D. El instrumento de evaluación.<br>
+
+<p id="r8"></p>
+
+
+<hr>
+
+<h3>9. ¿Cuántos párrafos se recomienda elaborar la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p9" value="A" onclick="verificar(this,'D',9)"> A. De 5 a 6 párrafos.<br>
+<input type="radio" name="p9" value="B" onclick="verificar(this,'D',9)"> B. Solo un párrafo.<br>
+<input type="radio" name="p9" value="C" onclick="verificar(this,'D',9)"> C. Más de 10 párrafos.<br>
+<input type="radio" name="p9" value="D" onclick="verificar(this,'D',9)"> D. De 1 a 2 párrafos.<br>
+
+<p id="r9"></p>
+
+
+<hr>
+
+<h3>10. ¿Cuál es la extensión máxima recomendada para cada párrafo de la importancia de la realidad problemática?</h3>
+
+<input type="radio" name="p10" value="A" onclick="verificar(this,'B',10)"> A. No mayor de 20 líneas.<br>
+<input type="radio" name="p10" value="B" onclick="verificar(this,'B',10)"> B. No mayor de 10 líneas por cada uno.<br>
+<input type="radio" name="p10" value="C" onclick="verificar(this,'B',10)"> C. Sin límite de extensión.<br>
+<input type="radio" name="p10" value="D" onclick="verificar(this,'B',10)"> D. No mayor de 30 líneas.<br>
+
+<p id="r10"></p>
+
+
+</body>
+</html>
